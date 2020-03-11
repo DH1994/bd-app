@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DH1994/bd-app/issues"
   },
-  "homepage": "https://github.com/DH1994/bd-app#readme"
+  "homepage": "https://github.com/DH1994/bd-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

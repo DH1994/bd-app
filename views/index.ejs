@@ -12,7 +12,9 @@
     </div>
     <div class="page">
       <ul>
-        <li><%= ip %></li>
+      <% for(var i=0; i<ips.length; i++) { %>
+        <li><%= ips[i] %></li>
+      <% } %>
       </ul>
     </div>
   </body>

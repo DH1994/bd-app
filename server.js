@@ -3,14 +3,20 @@ const app = express()
 const os = require('os')
 
 var ifaces = os.networkInterfaces();
+var ips = []
+for(dev in ifaces)
+{
+  ips.push(ifaces[dev][0].address)
+}
 
+console.log(ips)
 app.set('view engine', 'ejs')
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   // OLD CODE
   //res.send('Hello World!')
-  res.render('index', {ip: ifaces['wlo1'][0].address});
+  res.render('index', {ips: ips});
 })
 
 app.listen(3000, function () {
